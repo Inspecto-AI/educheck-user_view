@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCheck - Institute Registration | संस्थान पंजीकरण</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="top-bar">
+                <div class="language-selector">
+                    <select id="language-select" onchange="changeLanguage()" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-nav">
+                <div class="logo">EduCheck</div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="register-container">
+        <div class="register-box">
+            <h2>
+                <span class="en">Institute Registration</span>
+                <span class="hi">संस्थान पंजीकरण</span>
+            </h2>
+            <form id="registerForm" onsubmit="return validateForm(event)">
+                <!-- Basic Information -->
+                <section class="form-section">
+                    <h3>
+                        <span class="en">Basic Information</span>
+                        <span class="hi">मूल जानकारी</span>
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label for="instituteName">
+                            <span class="en">Institute Name</span>
+                            <span class="hi">संस्थान का नाम</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="instituteName" 
+                            name="instituteName" 
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="govtId">
+                            <span class="en">Government Unique ID</span>
+                            <span class="hi">सरकारी विशिष्ट आईडी</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="govtId" 
+                            name="govtId" 
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+                </section>
+
+                <!-- Contact Information -->
+                <section class="form-section">
+                    <h3>
+                        <span class="en">Contact Information</span>
+                        <span class="hi">संपर्क जानकारी</span>
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <span class="en">Institute Email</span>
+                            <span class="hi">संस्थान का ईमेल</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            <span class="en">Mobile Number</span>
+                            <span class="hi">मोबाइल नंबर</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            pattern="[0-9]{10}"
+                            required
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">
+                            <span class="en">Telephone Number</span>
+                            <span class="hi">टेलीफोन नंबर</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telephone" 
+                            name="telephone"
+                            pattern="[0-9]{8,12}"
+                        >
+                    </div>
+                </section>
+
+                <!-- Academic Information -->
+                <section class="form-section">
+                    <h3>
+                        <span class="en">Academic Information</span>
+                        <span class="hi">शैक्षणिक जानकारी</span>
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="studentRange">
+                            <span class="en">Number of Students</span>
+                            <span class="hi">छात्रों की संख्या</span>
+                            <span class="required">*</span>
+                        </label>
+                        <select id="studentRange" name="studentRange" required aria-required="true">
+                            <option value="">Select Range | रेंज चुनें</option>
+                            <option value="0-500">0-500</option>
+                            <option value="501-1000">501-1000</option>
+                            <option value="1001-5000">1001-5000</option>
+                            <option value="5000+">5000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>
+                                <span class="en">Available Courses</span>
+                                <span class="hi">उपलब्ध पाठ्यक्रम</span>
+                                <span class="required">*</span>
+                            </legend>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="courses" value="ug">
+                                    <span class="en">UG (Undergraduate)</span>
+                                    <span class="hi">स्नातक</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="courses" value="pg">
+                                    <span class="en">PG (Postgraduate)</span>
+                                    <span class="hi">स्नातकोत्तर</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="courses" value="phd">
+                                    <span class="en">PhD</span>
+                                    <span class="hi">पीएचडी</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="facultyRange">
+                            <span class="en">Number of Teaching Faculty</span>
+                            <span class="hi">शिक्षण संकाय की संख्या</span>
+                            <span class="required">*</span>
+                        </label>
+                        <select id="facultyRange" name="facultyRange" required aria-required="true">
+                            <option value="">Select Range | रेंज चुनें</option>
+                            <option value="0-50">0-50</option>
+                            <option value="51-100">51-100</option>
+                            <option value="101-500">101-500</option>
+                            <option value="500+">500+</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Facilities Information -->
+                <section class="form-section">
+                    <h3>
+                        <span class="en">Facilities</span>
+                        <span class="hi">सुविधाएं</span>
+                    </h3>
+
+                    <div class="facilities-grid">
+                        <!-- Hostel -->
+                        <div class="facility-item">
+                            <div class="facility-header">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="facilities" value="hostel" onchange="toggleFacilityDetails(this)">
+                                    <span class="en">Hostel</span>
+                                    <span class="hi">छात्रावास</span>
+                                </label>
+                            </div>
+                            <div class="facility-details" style="display: none;">
+                                <input 
+                                    type="number" 
+                                    name="hostelCount" 
+                                    placeholder="Number of Hostels | छात्रावासों की संख्या"
+                                    min="1"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Transport -->
+                        <div class="facility-item">
+                            <div class="facility-header">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="facilities" value="transport" onchange="toggleFacilityDetails(this)">
+                                    <span class="en">Transport</span>
+                                    <span class="hi">परिवहन</span>
+                                </label>
+                            </div>
+                            <div class="facility-details" style="display: none;">
+                                <input 
+                                    type="number" 
+                                    name="vehicleCount" 
+                                    placeholder="Number of Vehicles | वाहनों की संख्या"
+                                    min="1"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Medical -->
+                        <div class="facility-item">
+                            <div class="facility-header">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="facilities" value="medical" onchange="toggleFacilityDetails(this)">
+                                    <span class="en">Medical Facility</span>
+                                    <span class="hi">चिकित्सा सुविधा</span>
+                                </label>
+                            </div>
+                            <div class="facility-details" style="display: none;">
+                                <input 
+                                    type="number" 
+                                    name="bedCount" 
+                                    placeholder="Number of Beds | बिस्तरों की संख्या"
+                                    min="1"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Sports Ground -->
+                        <div class="facility-item">
+                            <div class="facility-header">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="facilities" value="sports">
+                                    <span class="en">Sports Ground</span>
+                                    <span class="hi">खेल का मैदान</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Gymnasium -->
+                        <div class="facility-item">
+                            <div class="facility-header">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="facilities" value="gym">
+                                    <span class="en">Gymnasium</span>
+                                    <span class="hi">व्यायामशाला</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="form-group submit-group">
+                    <button type="submit" class="register-submit-btn">
+                        <span class="en">Register Institute</span>
+                        <span class="hi">संस्थान पंजीकृत करें</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduCheck - <span class="en">All Rights Reserved</span><span class="hi">सभी अधिकार सुरक्षित</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+</body>
+</html> 

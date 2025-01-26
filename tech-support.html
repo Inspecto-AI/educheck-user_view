@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCheck - Technical Support | तकनीकी सहायता</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tech-support.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="images/educheck_logo.png" alt="EduCheck Logo" class="logo-img">
+                </div>
+                <div class="nav-right">
+                    <div class="language-selector">
+                        <select id="language-select" onchange="changeLanguage()">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="support-container">
+        <div class="support-box">
+            <h2>
+                <span class="en">Technical Support</span>
+                <span class="hi">तकनीकी सहायता</span>
+            </h2>
+
+            <section class="support-section working-hours">
+                <h3>
+                    <span class="en">Working Hours</span>
+                    <span class="hi">कार्य समय</span>
+                </h3>
+                <div class="hours-grid">
+                    <div class="day-time">
+                        <p>
+                            <span class="en">Monday - Friday</span>
+                            <span class="hi">सोमवार - शुक्रवार</span>
+                        </p>
+                        <p>9:00 AM - 6:00 PM (IST)</p>
+                    </div>
+                    <div class="day-time">
+                        <p>
+                            <span class="en">Saturday</span>
+                            <span class="hi">शनिवार</span>
+                        </p>
+                        <p>10:00 AM - 4:00 PM (IST)</p>
+                    </div>
+                    <div class="day-time closed">
+                        <p>
+                            <span class="en">Sunday</span>
+                            <span class="hi">रविवार</span>
+                        </p>
+                        <p>
+                            <span class="en">Closed</span>
+                            <span class="hi">बंद</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="support-section contact-methods">
+                <h3>
+                    <span class="en">Contact Methods</span>
+                    <span class="hi">संपर्क माध्यम</span>
+                </h3>
+                <div class="contact-grid">
+                    <div class="contact-method">
+                        <div class="method-icon">📞</div>
+                        <h4>
+                            <span class="en">Phone Support</span>
+                            <span class="hi">फोन सहायता</span>
+                        </h4>
+                        <p>1800-XXX-XXXX</p>
+                        <p>1800-YYY-YYYY</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon">📧</div>
+                        <h4>
+                            <span class="en">Email Support</span>
+                            <span class="hi">ईमेल सहायता</span>
+                        </h4>
+                        <p>support@educheck.in</p>
+                        <p>help@educheck.in</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon">💬</div>
+                        <h4>
+                            <span class="en">Live Chat</span>
+                            <span class="hi">लाइव चैट</span>
+                        </h4>
+                        <button class="chat-btn">
+                            <span class="en">Start Chat</span>
+                            <span class="hi">चैट शुरू करें</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="support-section faq">
+                <h3>
+                    <span class="en">Common Issues</span>
+                    <span class="hi">सामान्य समस्याएं</span>
+                </h3>
+                <div class="faq-list">
+                    <details>
+                        <summary>
+                            <span class="en">Login Issues</span>
+                            <span class="hi">लॉगिन समस्याएं</span>
+                        </summary>
+                        <p>
+                            <span class="en">If you're having trouble logging in, please check your institute code and password. Make sure Caps Lock is off.</span>
+                            <span class="hi">यदि लॉगिन में समस्या है, तो कृपया अपना संस्थान कोड और पासवर्ड जांचें। सुनिश्चित करें कि Caps Lock बंद है।</span>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="en">Registration Issues</span>
+                            <span class="hi">पंजीकरण समस्याएं</span>
+                        </summary>
+                        <p>
+                            <span class="en">For registration issues, ensure you have all required documents ready and your institute is approved by the relevant authorities.</span>
+                            <span class="hi">पंजीकरण समस्याओं के लिए, सुनिश्चित करें कि आपके पास सभी आवश्यक दस्तावेज तैयार हैं और आपका संस्थान संबंधित अधिकारियों द्वारा अनुमोदित है।</span>
+                        </p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduCheck - <span class="en">All Rights Reserved</span><span class="hi">सभी अधिकार सुरक्षित</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

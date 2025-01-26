@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCheck - Education Portal | शिक्षा पोर्टल</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="images/educheck_logo.png" alt="EduCheck Logo" class="logo-img">
+                </div>
+                <div class="nav-right">
+                    <div class="language-selector">
+                        <select id="language-select" onchange="changeLanguage()">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                        </select>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="login-btn">
+                            <span class="en">Login</span>
+                            <span class="hi">लॉगिन</span>
+                        </a>
+                        <a href="register.html" class="register-btn">
+                            <span class="en">Register</span>
+                            <span class="hi">रजिस्टर</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slider Section -->
+        <section class="slider-section">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://www.ugi.ac.in/blog/wp-content/uploads/2017/06/Vidya-Laxmi.jpg" 
+                         alt="Vidya Laxmi Education Loan Scheme"
+                         loading="lazy">
+                    <div class="slide-text">
+                        <span class="en">Vidya Laxmi Education Loan Scheme</span>
+                        <span class="hi">विद्या लक्ष्मी शिक्षा ऋण योजना</span>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.hindustantimes.com/img/2021/09/29/1600x900/cdf2e3e4-211c-11ec-aeba-4b5b44d8440e_1632917000281.jpg" 
+                         alt="Mid Day Meal Scheme"
+                         loading="lazy">
+                    <div class="slide-text">
+                        <span class="en">Mid Day Meal Scheme</span>
+                        <span class="hi">मिड-डे मील योजना</span>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://www.opindia.com/wp-content/uploads/2025/01/Beti-Bachao-Beti-Padhao-10-years.jpg" 
+                         alt="Beti Bachao Beti Padhao"
+                         loading="lazy">
+                    <div class="slide-text">
+                        <span class="en">Beti Bachao Beti Padhao</span>
+                        <span class="hi">बेटी बचाओ बेटी पढ़ाओ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates Section -->
+        <section class="updates-section">
+            <h2>
+                <span class="en">Important Notices</span>
+                <span class="hi">महत्वपूर्ण सूचनाएं</span>
+            </h2>
+            <div class="updates-container">
+                <div class="notice">
+                    <h3>
+                        <span class="en">Exam Dates Announced</span>
+                        <span class="hi">परीक्षा तिथियां घोषित</span>
+                    </h3>
+                    <p>
+                        <span class="en">Board examination dates for 2024 have been announced.</span>
+                        <span class="hi">वर्ष 2024 की बोर्ड परीक्षाओं की तिथियां घोषित कर दी गई हैं।</span>
+                    </p>
+                    <a href="#">
+                        <span class="en">Read More</span>
+                        <span class="hi">और पढ़ें</span>
+                    </a>
+                </div>
+                <div class="circular">
+                    <h3>
+                        <span class="en">New Education Policy</span>
+                        <span class="hi">नई शैक्षणिक नीति</span>
+                    </h3>
+                    <p>
+                        <span class="en">New guidelines for National Education Policy 2024 released.</span>
+                        <span class="hi">राष्ट्रीय शिक्षा नीति 2024 के नए दिशानिर्देश जारी।</span>
+                    </p>
+                    <a href="#">
+                        <span class="en">Read More</span>
+                        <span class="hi">और पढ़ें</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>
+                <span class="en">Contact Us</span>
+                <span class="hi">संपर्क करें</span>
+            </h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name | आपका नाम">
+                    <input type="email" placeholder="Email | ईमेल">
+                    <textarea placeholder="Message | संदेश"></textarea>
+                    <button type="submit">
+                        <span class="en">Send</span>
+                        <span class="hi">भेजें</span>
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <h3>
+                        <span class="en">Contact Information</span>
+                        <span class="hi">संपर्क जानकारी</span>
+                    </h3>
+                    <p>📞 <span class="en">Phone</span><span class="hi">फोन</span>: 1800-XXX-XXXX</p>
+                    <p>📧 <span class="en">Email</span><span class="hi">ईमेल</span>: contact@educheck.in</p>
+                    <p>🏢 <span class="en">Address</span><span class="hi">पता</span>: New Delhi, India | नई दिल्ली, भारत</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduCheck - <span class="en">All Rights Reserved</span><span class="hi">सभी अधिकार सुरक्षित</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
